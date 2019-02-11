@@ -1,0 +1,10 @@
+{% extends 'todo/base.html' %}
+
+{% block bb %}
+    {% for todo in todos %}
+        <h1>{{todo.title}}</h1>
+        <a href="{% url 'todos:detail' todo.id %}"> 글보기 </a>
+        
+    {% endfor %}
+
+{% endblock %}

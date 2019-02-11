@@ -1,0 +1,17 @@
+{% extends 'todo/base.html' %}
+{% block bb %}
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4 text-center">{{todo.title}}</h1><hr>
+        <p class="lead">{{todo.content}}</p>
+      </div>
+    </div>
+
+    <a href="{% url 'todos:update' todo.id %}">수정</a>
+    <a href="/todos/{{todo.id}}/delete">삭제</a>
+   
+  
+    
+
+{% endblock %}

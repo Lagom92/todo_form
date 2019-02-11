@@ -1,0 +1,11 @@
+{% extends 'todo/base.html' %}
+{% load bootstrap4 %}
+{% block bb %}
+<form method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <input type="submit" value="Submit"/>
+</form>
+
+
+{% endblock %}
